@@ -97,8 +97,8 @@ def _train(model, args):
               pred_img = model(input_img)  
                   
               if args.loss_mode == 'fft_loss_out':
-                label_fft3 = torch.fft.fft(label_img)
-                pred_fft3 = torch.fft.fft(pred_img[-1])
+                label_fft3 = torch.fft.fft2(label_img)
+                pred_fft3 = torch.fft.fft2(pred_img[-1])
 
                 dist = LPIP_loss.forward(pred_img[-1],label_img)
                 lpip_loss = criterion_fft(torch.zeros_like(dist).to(torch.device('cuda')), dist)                           
