@@ -111,8 +111,7 @@ def _train(model, args):
 
                 loss = loss_content + 0.2 * loss_fft  + 0.2 * lpip_loss   + 0.05*ax_loss
 
-                loss = loss_content + loss_fft  + 0.2 * lpip_loss + 0.2*(1-torch.mean(ssim(pred_img[-1], label_img, data_range=1, size_average=False)))
-
+               
               
             loss.backward()
             opt.step()
