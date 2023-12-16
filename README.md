@@ -29,4 +29,4 @@ python main.py --model_name "P2IKT" --mode "train" --data_dir 'you data path' --
 Although we fixed the random_seed in our experiments, but nn.upsample(mode='bilinear') is nondeterministic (please refer to this link  https://github.com/pytorch/pytorch/issues/107999), So, the results of each training will be subtly different.
 
 
-## It is free for the use of scientific research and non-commercial research
+## Our code is free for the use of scientific research and non-commercial research
