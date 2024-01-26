@@ -10,6 +10,8 @@ sklearn==0.24.2
 pandas==2.0.0  
 keras==2.12.0  
 numpy==1.23.5  
+lpips==0.1.4
+
 ## Test
 The pretrained weight is already in the directory of pretrain_weight (P2IKT_SWA.pkl), you can directly use it to reproduce the result of our paper.  
 Just modifying the data_dir for the testing in your environment.
