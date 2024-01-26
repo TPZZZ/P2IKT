@@ -7,13 +7,13 @@ import torchvision
 from valid import _valid
 import torch.nn.functional as F
 from torchcontrib.optim import SWA
-from pytorch_msssim import ssim
+#from pytorch_msssim import ssim
 import torch.nn as nn
 import numpy as np 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch_optimizer
+#import torch_optimizer
 
 LPIP_loss = LPIPS.PerceptualLoss(model='net-lin',net='alex', gpu_ids = [torch.cuda.current_device()]).to(torch.device('cuda'))
 for param in LPIP_loss.parameters():
