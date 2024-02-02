@@ -103,6 +103,13 @@ def test(dataset, model_name_list, experimental_name=None, save_image=False, dow
 
                   input_img = input_img
                   label_img = label_img
+                  if dataset == 'DED':
+                      input_img = input_img[:,:,:400,:608]
+                      label_img = label_img[:,:,:400,:608]        
+                  elif dataset == 'RTF':
+  
+                      input_img = input_img[:,:,:352,:352]
+                      label_img = label_img[:,:,:352,:352]      
                  
                   input_img = input_img.to(device)
 
@@ -126,7 +133,13 @@ def test(dataset, model_name_list, experimental_name=None, save_image=False, dow
             for iter_idx, data in enumerate(dataloader):
 
                 input_img, label_img, name = data
+                if dataset == 'DED':
+                    input_img = input_img[:,:,:400,:608]
+                    label_img = label_img[:,:,:400,:608] 
+                elif dataset == 'RTF':
 
+                   input_img = input_img[:,:,:352,:352]
+                   label_img = label_img[:,:,:352,:352]    
 
                 input_img = input_img.to(device)
 
