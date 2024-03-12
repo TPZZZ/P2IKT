@@ -32,5 +32,3 @@ Although we fixed the random_seed in our experiments, but nn.upsample(mode='bili
 
 
 ## Our code is free for the use of scientific research and non-commercial research
-
-If there are any qeustions, please contact tangp@in.tum.de
